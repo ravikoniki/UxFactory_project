@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>andhrapradesh details</title>
+    <style>
+      .topnav {
+  overflow: hidden;
+  background-color:#6D9886;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:wheat;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: greenyellow;
+  color: white;
+}
+.topnav a.visited {
+    background-color: aqua;
+    color: white;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 10%;
+  float:left;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: wheat;
+}
+</style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a  href="about.html" target="_blank" method="post">About</a>
+       
+        <a href="religion.html"target="_blank" method="post">Religion</a>
+        <a href="economy.html" target="_blank" method="post">Economy</a>
+        <a href="contactus.html" target="_blank" method="post">Contactus</a>
+      </div>
+      <div class="row">
+        <div class="left" style="background-color:#EADEB8">
+          <h2>Menu</h2>
+          <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category"><br><br>
+          <ul id="myMenu">
+            <li><a href="srikakulam.html" target="_blank" method="post">SRIKAKULAM</a></li>
+            <li><a href="vizayanagaram.html" target="_blank" method="post">VIZAYANAGARAM</a></li>
+            <li><a href="visakhapatnam.html" target="_blank" method="post">VISAKHAPATNAM</a></li>
+            <li><a href="eastgodavari.html" target="_blank" method="post">EASTGODAVARI</a></li>
+            <li><a href="westgodavari.html" target="_blank" method="post">WESTGODAVARI</a></li>
+            <li><a href="krishna.html" target="_blank" method="post">KRISHNA</a></li>
+            <li><a href="guntur.html" target="_blank" method="post">GUNTUR</a></li>
+            <li><a href="prakasam.html" target="_blank" method="post">PRAKASAM</a></li>
+            <li><a href="nellore.html" target="_blank" method="post">NELLORE</a></li>
+            <li><a href="chitthor.html" target="_blank" method="post">CHITTHOR</a></li>
+            <li><a href="kurnool.html" target="_blank" method="post">KURNOOL</a></li>
+            <li><a href="kadapa.html" target="_blank" method="post">KADAPA</a></li>
+            <li><a href="ananthapur.html" target="_blank" method="post">ANANTHAPUR</a></li>
+          </ul>
+        </div>
+        <script>
+            function myFunction() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("mySearch");
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myMenu");
+              li = ul.getElementsByTagName("li");
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+            </script>
+</body>
+
+</html>
